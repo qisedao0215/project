@@ -13,6 +13,12 @@
 		CC5B10C41908E097001563BB /* pickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5B10C31908E097001563BB /* pickerViewController.m */; };
 		CC5B10C719093F06001563BB /* pickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5B10C619093F06001563BB /* pickerView.m */; };
 		CC5B10CA19093F70001563BB /* pickerViewZX.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5B10C919093F70001563BB /* pickerViewZX.m */; };
+		CC7DC295190A24E100B4FC4B /* imageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7DC294190A24E100B4FC4B /* imageViewController.m */; };
+		CC7DC298190A2B5100B4FC4B /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7DC297190A2B5100B4FC4B /* webViewController.m */; };
+		CC7DC29B190A306A00B4FC4B /* segmentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7DC29A190A306A00B4FC4B /* segmentsViewController.m */; };
+		CC7DC29E190A311A00B4FC4B /* toolbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7DC29D190A311A00B4FC4B /* toolbarViewController.m */; };
+		CC7DC2A1190A31FA00B4FC4B /* alertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7DC2A0190A31FA00B4FC4B /* alertsViewController.m */; };
+		CC7DC2A4190A327500B4FC4B /* transitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7DC2A3190A327500B4FC4B /* transitionViewController.m */; };
 		CCA493E819021E030053D806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA493E719021E030053D806 /* Foundation.framework */; };
 		CCA493EA19021E030053D806 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA493E919021E030053D806 /* CoreGraphics.framework */; };
 		CCA493EC19021E030053D806 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA493EB19021E030053D806 /* UIKit.framework */; };
@@ -81,6 +87,18 @@
 		CC5B10C619093F06001563BB /* pickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerView.m; sourceTree = "<group>"; };
 		CC5B10C819093F70001563BB /* pickerViewZX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerViewZX.h; sourceTree = "<group>"; };
 		CC5B10C919093F70001563BB /* pickerViewZX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerViewZX.m; sourceTree = "<group>"; };
+		CC7DC293190A24E100B4FC4B /* imageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageViewController.h; sourceTree = "<group>"; };
+		CC7DC294190A24E100B4FC4B /* imageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imageViewController.m; sourceTree = "<group>"; };
+		CC7DC296190A2B5100B4FC4B /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		CC7DC297190A2B5100B4FC4B /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
+		CC7DC299190A306A00B4FC4B /* segmentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = segmentsViewController.h; sourceTree = "<group>"; };
+		CC7DC29A190A306A00B4FC4B /* segmentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = segmentsViewController.m; sourceTree = "<group>"; };
+		CC7DC29C190A311A00B4FC4B /* toolbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toolbarViewController.h; sourceTree = "<group>"; };
+		CC7DC29D190A311A00B4FC4B /* toolbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toolbarViewController.m; sourceTree = "<group>"; };
+		CC7DC29F190A31FA00B4FC4B /* alertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = alertsViewController.h; sourceTree = "<group>"; };
+		CC7DC2A0190A31FA00B4FC4B /* alertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = alertsViewController.m; sourceTree = "<group>"; };
+		CC7DC2A2190A327500B4FC4B /* transitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transitionViewController.h; sourceTree = "<group>"; };
+		CC7DC2A3190A327500B4FC4B /* transitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transitionViewController.m; sourceTree = "<group>"; };
 		CCA493E419021E030053D806 /* ZXProjectZY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXProjectZY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA493E719021E030053D806 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCA493E919021E030053D806 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,7 +220,6 @@
 		CCA493ED19021E030053D806 /* ZXProjectZY */ = {
 			isa = PBXGroup;
 			children = (
-				CC0E5E1C1909F16000463FAD /* pickerView */,
 				CCA493F619021E030053D806 /* AppDelegate.h */,
 				CCA493F719021E030053D806 /* AppDelegate.m */,
 				CCA4941619021E390053D806 /* mainTableViewController.h */,
@@ -219,8 +236,21 @@
 				CCFDC6CE1906067700A034D0 /* textViewController.m */,
 				CC5B10C21908E097001563BB /* pickerViewController.h */,
 				CC5B10C31908E097001563BB /* pickerViewController.m */,
+				CC7DC293190A24E100B4FC4B /* imageViewController.h */,
+				CC7DC294190A24E100B4FC4B /* imageViewController.m */,
+				CC7DC296190A2B5100B4FC4B /* webViewController.h */,
+				CC7DC297190A2B5100B4FC4B /* webViewController.m */,
+				CC7DC299190A306A00B4FC4B /* segmentsViewController.h */,
+				CC7DC29A190A306A00B4FC4B /* segmentsViewController.m */,
+				CC7DC29C190A311A00B4FC4B /* toolbarViewController.h */,
+				CC7DC29D190A311A00B4FC4B /* toolbarViewController.m */,
+				CC7DC29F190A31FA00B4FC4B /* alertsViewController.h */,
+				CC7DC2A0190A31FA00B4FC4B /* alertsViewController.m */,
+				CC7DC2A2190A327500B4FC4B /* transitionViewController.h */,
+				CC7DC2A3190A327500B4FC4B /* transitionViewController.m */,
 				CC19AC1819067BD800530BBF /* ZXZYTableViewController.h */,
 				CC19AC1919067BD800530BBF /* ZXZYTableViewController.m */,
+				CC0E5E1C1909F16000463FAD /* pickerView */,
 				CCA493F919021E030053D806 /* Images.xcassets */,
 				CCA493EE19021E030053D806 /* Supporting Files */,
 			);
@@ -406,7 +436,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCEC34EC1905205F00537D3C /* searchBarViewController.m in Sources */,
+				CC7DC298190A2B5100B4FC4B /* webViewController.m in Sources */,
+				CC7DC295190A24E100B4FC4B /* imageViewController.m in Sources */,
 				CCA493F819021E030053D806 /* AppDelegate.m in Sources */,
+				CC7DC29E190A311A00B4FC4B /* toolbarViewController.m in Sources */,
 				CC19AC1A19067BD800530BBF /* ZXZYTableViewController.m in Sources */,
 				CC5B10C719093F06001563BB /* pickerView.m in Sources */,
 				CC5B10CA19093F70001563BB /* pickerViewZX.m in Sources */,
@@ -414,9 +447,12 @@
 				CCFDC6CF1906067700A034D0 /* textViewController.m in Sources */,
 				CC40EC331902729900C18351 /* viewTableViewController.m in Sources */,
 				CC5B10C41908E097001563BB /* pickerViewController.m in Sources */,
+				CC7DC29B190A306A00B4FC4B /* segmentsViewController.m in Sources */,
 				CCA4941819021E390053D806 /* mainTableViewController.m in Sources */,
 				CCA493F419021E030053D806 /* main.m in Sources */,
+				CC7DC2A4190A327500B4FC4B /* transitionViewController.m in Sources */,
 				CC22CC371904F47800F0EC35 /* buttonTableViewController.m in Sources */,
+				CC7DC2A1190A31FA00B4FC4B /* alertsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

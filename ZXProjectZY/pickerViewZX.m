@@ -19,10 +19,10 @@
     if (self) {
         // Initialization code
         viewMain=[[UIImageView alloc] init];
-        viewMain.frame=CGRectMake(10, 0, 40, 40);
+        viewMain.frame=CGRectMake(30, 0, 40, 40);
         [self addSubview:viewMain];
         
-        label=[[UILabel alloc]initWithFrame:CGRectMake(70, 0, 250, 40)];
+        label=[[UILabel alloc]initWithFrame:CGRectMake(90, 0, 250, 40)];
         
         [self addSubview:label];
         

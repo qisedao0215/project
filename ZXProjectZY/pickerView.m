@@ -35,7 +35,7 @@
           forComponent:(NSInteger)component reusingView:(UIView *)view
 {
     pickerViewZX *mainView=[[pickerViewZX alloc]initWithFrame:CGRectMake(0, 0, 320, 40)];
-    [mainView setValue:[UIImage imageNamed:@"12-6AM"] title:self.strName[row]];
+    [mainView setValue:[UIImage imageNamed:self.imageName[row]] title:self.strName[row]];
     return mainView;
     
 }
