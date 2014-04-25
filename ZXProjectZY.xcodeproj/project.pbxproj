@@ -158,6 +158,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0E5E1C1909F16000463FAD /* pickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CC5B10C519093F06001563BB /* pickerView.h */,
+				CC5B10C619093F06001563BB /* pickerView.m */,
+				CC5B10C819093F70001563BB /* pickerViewZX.h */,
+				CC5B10C919093F70001563BB /* pickerViewZX.m */,
+			);
+			name = pickerView;
+			sourceTree = "<group>";
+		};
 		CCA493DB19021E030053D806 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +202,7 @@
 		CCA493ED19021E030053D806 /* ZXProjectZY */ = {
 			isa = PBXGroup;
 			children = (
+				CC0E5E1C1909F16000463FAD /* pickerView */,
 				CCA493F619021E030053D806 /* AppDelegate.h */,
 				CCA493F719021E030053D806 /* AppDelegate.m */,
 				CCA4941619021E390053D806 /* mainTableViewController.h */,
@@ -207,10 +219,6 @@
 				CCFDC6CE1906067700A034D0 /* textViewController.m */,
 				CC5B10C21908E097001563BB /* pickerViewController.h */,
 				CC5B10C31908E097001563BB /* pickerViewController.m */,
-				CC5B10C519093F06001563BB /* pickerView.h */,
-				CC5B10C619093F06001563BB /* pickerView.m */,
-				CC5B10C819093F70001563BB /* pickerViewZX.h */,
-				CC5B10C919093F70001563BB /* pickerViewZX.m */,
 				CC19AC1819067BD800530BBF /* ZXZYTableViewController.h */,
 				CC19AC1919067BD800530BBF /* ZXZYTableViewController.m */,
 				CCA493F919021E030053D806 /* Images.xcassets */,

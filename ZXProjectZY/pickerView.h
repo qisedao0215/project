@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface pickerView : NSObject<UIPickerViewDataSource,UIPickerViewDelegate>
+@property(nonatomic,copy)NSArray *imageName;
+@property(nonatomic,copy)NSArray *strName;
 
 @end

@@ -83,6 +83,7 @@
         case 0:
         {
             pickViewOne.hidden=NO;
+            label.hidden=NO;
             
             datepicker.hidden=YES;
             pickViewTwo.hidden=YES;
@@ -93,6 +94,8 @@
             break;
         case 1:
         {
+            label.hidden=NO;
+            
             pickViewOne.hidden=YES;
             pickViewTwo.hidden=YES;
             datepicker=[[UIDatePicker alloc]initWithFrame:CGRectMake(0, CGRectGetMinY(pickViewOne.frame), 0, 0)];
@@ -115,6 +118,7 @@
             pickViewOne.hidden=YES;
             datepicker.hidden=YES;
             twoSegmentCtl.hidden=YES;
+            label.hidden=YES;
             
             pickViewTwo =[[UIPickerView alloc]initWithFrame:CGRectMake(0, CGRectGetMinY(pickViewOne.frame), 0, 0)];
             pickerView *pickerViewThree=[[pickerView alloc]init];

@@ -14,6 +14,7 @@
 @property (retain,nonatomic)UIButton *buttonImage;
 @property (retain,nonatomic)UIButton *roundedButton;
 @property (retain,nonatomic)UIButton *attriButton;
+@property (retain,nonatomic)UIButton *btnDetailDes;
 
 @end
 static NSString *kTitleKey=@"titleKey";
@@ -50,7 +51,11 @@ static NSString *kViewKey=@"viewKye";
                               kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my attriButton!",
                               kViewKey:self.attriButton},
                            
-                           
+                            @{kTitleKey:@"UIBUTTONTYPE",
+                              kLabelKey:@"Rounded Button",
+                              kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my attriButton!",
+                              kViewKey:self.attriButton},
+
                            
                            ];
     }

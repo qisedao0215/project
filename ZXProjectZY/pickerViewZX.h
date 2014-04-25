@@ -10,6 +10,8 @@
 
 @interface pickerViewZX : UIView
 
-@property(nonatomic,retain)UIImage *imageView;
 @property(nonatomic,copy)NSString *str;
+
+-(void)setValue:(UIImage*)imageView title:(NSString*)str;
+
 @end

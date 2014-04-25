@@ -8,27 +8,32 @@
 
 #import "pickerViewZX.h"
 
-@implementation pickerViewZX
-{
+@implementation pickerViewZX{
     UIImageView *viewMain;
+    UILabel *label;
 }
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         viewMain=[[UIImageView alloc] init];
-                  viewMain.frame=CGRectMake(10, 0, 40, 40);
-                  [self addSubview:viewMain];
-//        viewMain.frame=CGRectMake(10, 0, 40, 40);
-//        [self addSubview:viewMain];
-//        
-//        UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(70, 0, 250, 40)];
-//        label.text=_str;
-//        [self addSubview:label];
+        viewMain.frame=CGRectMake(10, 0, 40, 40);
+        [self addSubview:viewMain];
+        
+        label=[[UILabel alloc]initWithFrame:CGRectMake(70, 0, 250, 40)];
+        
+        [self addSubview:label];
         
     }
     return self;
 }
-
+-(void)setValue:(UIImage *)imageView title:(NSString *)str
+{
+    viewMain.image=imageView;
+    label.text=str;
+}
 @end
+
+
