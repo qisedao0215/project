@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface toolbarViewController : UIViewController
+@interface toolbarViewController : UIViewController<UIPickerViewDataSource,UIPickerViewDelegate>
 
 @end
