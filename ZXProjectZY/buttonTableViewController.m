@@ -15,12 +15,17 @@
 @property (retain,nonatomic)UIButton *roundedButton;
 @property (retain,nonatomic)UIButton *attriButton;
 @property (retain,nonatomic)UIButton *btnDetailDes;
+@property (retain,nonatomic)UIButton *infoLight;
+@property (retain,nonatomic)UIButton *InfoDark;
+@property (retain,nonatomic)UIButton *ContactAdd;
 
 @end
 static NSString *kTitleKey=@"titleKey";
 static NSString *kExplainKey=@"explainKey";
 static NSString *kLabelKey=@"labelKey";
 static NSString *kViewKey=@"viewKye";
+
+static NSString *cellFileItmeOne=@"one";
 
 
 @implementation buttonTableViewController
@@ -46,17 +51,30 @@ static NSString *kViewKey=@"viewKye";
                               kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my roundedButton!",
                               kViewKey:self.roundedButton},
                             
-                            @{kTitleKey:@"UIBUTTONTYOEROUNDEDRECT",
-                              kLabelKey:@"Rounded Button",
+                            @{kTitleKey:@"UIButtonTypeRoundedRect",
+                              kLabelKey:@"alttriButton Button",
                               kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my attriButton!",
                               kViewKey:self.attriButton},
                            
-                            @{kTitleKey:@"UIBUTTONTYPE",
-                              kLabelKey:@"Rounded Button",
-                              kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my attriButton!",
-                              kViewKey:self.attriButton},
+                            @{kTitleKey:@"UIButtonTypeDetailDisclosure",
+                              kLabelKey:@"Detail Desclosure",
+                              kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my Detail desclosure!",
+                              kViewKey:self.btnDetailDes},
 
-                           
+                            @{kTitleKey:@"UIButtonTypeInfoLight",
+                              kLabelKey:@"Info light",
+                              kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my Info light!",
+                              kViewKey:self.infoLight},
+                            
+                            @{kTitleKey:@"UIButtonTypeInfoDark",
+                              kLabelKey:@"Info Dark",
+                              kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my Info Dark!",
+                              kViewKey:self.InfoDark},
+                            
+                            @{kTitleKey:@"UIButtonTypeContactAdd",
+                              kLabelKey:@"ContactAdd",
+                              kExplainKey:@"buttonTableViewContrlooer.m\n(UIButton*)this is my ContactAdd!",
+                              kViewKey:self.ContactAdd},
                            ];
     }
     return self;
@@ -72,6 +90,7 @@ static NSString *kViewKey=@"viewKye";
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellFileItme];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellFileItmeOne];
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,27 +126,29 @@ static NSString *kViewKey=@"viewKye";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellFileItme forIndexPath:indexPath];
+    UITableViewCell *cell=nil;
     if (indexPath.row==0) {
+        cell=[tableView dequeueReusableCellWithIdentifier:cellFileItme forIndexPath:indexPath];
+//        UILabel *lable=[[UILabel alloc]initWithFrame:CGRectMake(20, 0, 180, 60)];
+//        lable.text=[self.buttonArray[indexPath.section] objectForKey:kLabelKey] ;
+//        lable.font=[UIFont systemFontOfSize:21];
+//        lable.textAlignment=NSTextAlignmentCenter;
+//
+//        [cell.contentView addSubview:lable];
+        cell.textLabel.text=[self.buttonArray[indexPath.section] objectForKey:kLabelKey];
         
-        UILabel *lable=[[UILabel alloc]initWithFrame:CGRectMake(20, 0, 180, 60)];
-        lable.text=[self.buttonArray[indexPath.section] objectForKey:kLabelKey] ;
-        lable.font=[UIFont systemFontOfSize:21];
-        lable.textAlignment=NSTextAlignmentCenter;
-//        lable.textAlignment=
-        [cell.contentView addSubview:lable   ];
-       
-//        CGRect frame= CGRectMake(10, 10, CGRectGetWidth(cell.contentView.frame)-20, 40);
+        
         UIView *view=[cell.contentView viewWithTag:1001];
         if (view) {
-            [cell removeFromSuperview];
+            [view removeFromSuperview];
         }
-        cell.tag=1001;
+//        cell.tag=1001;
         cell.accessoryView=[self.buttonArray[indexPath.section] objectForKey:kViewKey];
 
        
         
     }else{
+        cell=[tableView dequeueReusableCellWithIdentifier:cellFileItmeOne forIndexPath:indexPath];
         cell.textLabel.numberOfLines=2;
         cell.textLabel.textAlignment=NSTextAlignmentCenter;
         cell.textLabel.font=[UIFont systemFontOfSize:12];
@@ -153,6 +174,7 @@ static NSString *kViewKey=@"viewKye";
         [btn setTitle:@"back" forState:UIControlStateNormal];
         [btn setBackgroundImage:image forState:UIControlStateNormal];
         [btn setBackgroundImage:blueImage forState:UIControlStateHighlighted];
+        btn.tag=1001;
         _background=btn;
     }
     
@@ -173,6 +195,7 @@ static NSString *kViewKey=@"viewKye";
         
         [btn setBackgroundImage:image forState:UIControlStateNormal];
         [btn setBackgroundImage:blueImage forState:UIControlStateHighlighted];
+        btn.tag=1001;
         _buttonImage=btn;
     }
 
@@ -185,6 +208,7 @@ static NSString *kViewKey=@"viewKye";
         UIButton  *btn =[UIButton buttonWithType:UIButtonTypeRoundedRect];
         btn.frame=CGRectMake(0, 0, 80, 30);
         [btn setTitle:@"Rounded" forState:UIControlStateNormal];
+        btn.tag=1001;
         _roundedButton=btn;
         
     }
@@ -198,7 +222,7 @@ static NSString *kViewKey=@"viewKye";
         btn.tintColor=[UIColor redColor];
         btn.frame=CGRectMake(0, 0, 80, 30);
         [btn setTitle:@"Rounded" forState:UIControlStateNormal];
-        
+        btn.tag=1001;
         _attriButton=btn;
     }
     
@@ -206,5 +230,55 @@ static NSString *kViewKey=@"viewKye";
     
 }
 
+-(UIButton*)btnDetailDes
+{
+    if (_btnDetailDes==nil) {
+        UIButton *btn= [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        btn.tintColor=[UIColor redColor];
+        btn.frame=CGRectMake(0, 0, 80, 30);
+//        [btn setTitle:@"Rounded" forState:UIControlStateNormal];
+        btn.tag=1001;
+        _btnDetailDes=btn;
+    }
+    
+    return _btnDetailDes ;
+
+}
+-(UIButton*)infoLight
+{
+    if (_infoLight==nil) {
+        UIButton *btn=[UIButton buttonWithType:UIButtonTypeInfoLight];
+        btn.frame=CGRectMake(0, 0, 80, 30) ;
+        btn.tag=1001;
+        _infoLight=btn;
+        
+    }
+    return _infoLight;
+}
+
+-(UIButton*)InfoDark
+{
+    if (_InfoDark==nil) {
+        UIButton *btn=[UIButton buttonWithType:UIButtonTypeInfoDark];
+        btn.frame=CGRectMake(0, 0, 80, 30) ;
+        btn.tag=1001;
+        _InfoDark=btn;
+        
+    }
+    return _InfoDark;
+}
+
+-(UIButton*)ContactAdd
+{
+    if (_ContactAdd==nil) {
+        UIButton *btn=[UIButton buttonWithType:UIButtonTypeInfoDark];
+        btn.frame=CGRectMake(0, 0, 80, 30) ;
+        btn.tag=1001;
+        _ContactAdd=btn;
+        
+    }
+
+    return _ContactAdd;
+}
 
 @end

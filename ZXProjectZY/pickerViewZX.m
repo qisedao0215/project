@@ -8,7 +8,8 @@
 
 #import "pickerViewZX.h"
 
-@implementation pickerViewZX{
+@implementation pickerViewZX
+{
     UIImageView *viewMain;
     UILabel *label;
 }
