@@ -24,28 +24,90 @@
     }
     return self;
 }
-
++(UILabel*)setUILabel:(NSString*)title toFrame:(CGRect)frame
+{
+    UILabel *label=[[UILabel alloc]initWithFrame:frame];
+    label.text=title;
+    label.font=[UIFont fontWithName:@"Menlo" size:16];
+    
+    return label;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CGRect frame=CGRectMake(20, 70, 280, 40);
+    [self.view addSubview:[segmentsViewController setUILabel:
+                          @"UISegmentViewController:" toFrame:frame]];
+    UISegmentedControl *segOne=[[UISegmentedControl alloc]
+                                initWithItems:@[
+                                                [UIImage imageNamed:@"segment_check"],
+                                                [UIImage imageNamed: @"segment_search"],
+                                                [UIImage imageNamed:@"segment_tools"]]];
+                                
+    frame.origin.y+=40;
+    segOne.frame=frame;
+    [self.view addSubview:segOne];
+    
+    
+    frame.origin.y+=40;
+    [self.view addSubview:[segmentsViewController setUILabel:
+                           @"UISegmentViewControllerStyleBordered:" toFrame:frame]];
+    UISegmentedControl *segTwo=[[UISegmentedControl alloc]
+                                initWithItems:@[@"check",@"search",@"tools"]];
+    frame.origin.y+=40;
+    segTwo.frame=frame;
+//    segTwo.segmentedControlStyle=UISegmentedControlNoSegment;
+    
+    [self.view addSubview:segTwo];
+    
+    
+    frame.origin.y+=40;
+    [self.view addSubview:[segmentsViewController setUILabel:
+                           @"UISegmentViewControllerStyleBar:" toFrame:frame]];
+    UISegmentedControl *segThr=[[UISegmentedControl alloc]
+                                initWithItems:@[@"check",@"search",@"tools"]];
+    frame.origin.y+=40;
+    segThr.frame=frame;
+    [self.view addSubview:segThr];
+    
+    
+    frame.origin.y+=40;
+    [self.view addSubview:[segmentsViewController setUILabel:
+                           @"UISegmentViewControllerBar:init" toFrame:frame]];
+    UISegmentedControl *segFor=[[UISegmentedControl alloc]
+                                initWithItems:@[@"check",@"search",@"tools"]];
+    frame.origin.y+=40;
+    segFor.frame=frame;
+    segFor.tintColor=[UIColor redColor];
+    [self.view addSubview:segFor];
+    
+    
+    frame.origin.y+=40;
+    [self.view addSubview:[segmentsViewController setUILabel:
+                           @"UISegmentViewControllerBar:image" toFrame:frame]];
+    UISegmentedControl *segFif=[[UISegmentedControl alloc]
+                                initWithItems:@[@"check",@"search",@"tools"]];
+    frame.origin.y+=40;
+    segFif.frame=frame;
+//    segFif.segmentedControlStyle  =UIControlStateNormal;
+    [segFif setBackgroundImage:[UIImage imageNamed:@"searchBarBackground"]
+                      forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [segFif setDividerImage:[UIImage imageNamed:@"divider"]
+        forLeftSegmentState:UIControlStateNormal
+          rightSegmentState:UIControlStateNormal
+                 barMetrics:UIBarMetricsDefault];
+    [self.view addSubview:segFif];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

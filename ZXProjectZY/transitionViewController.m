@@ -30,6 +30,24 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIImageView *imageViewZX=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"scene1.jpg"]];
+    imageViewZX.frame=CGRectMake(20, 70, 280, 200);
+    
+    [self.view addSubview:imageViewZX];
+    
+    
+    UIButton *btnOne=[[UIButton alloc]initWithFrame:CGRectMake(40, self.view.bounds.size.height-50, 100, 30)];
+    btnOne.backgroundColor =[UIColor yellowColor];
+    [btnOne addTarget:self action:@selector(onBTNOne) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btnOne];
+    
+    
+    
+    UIButton *btnTwo=[[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMaxX(btnOne.frame)+40, btnOne.frame.origin.y, CGRectGetWidth(btnOne.bounds), CGRectGetHeight(btnOne.bounds))];
+    [btnTwo setTitle:@"123" forState:UIControlStateNormal];
+    btnTwo.backgroundColor=[UIColor yellowColor];
+    [btnTwo addTarget:self action:@selector(onBTNTwo) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btnTwo];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,15 +56,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)onBTNOne
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
 }
-*/
+
+
+-(void)onBTNTwo
+{
+    
+    
+}
 
 @end
